@@ -10,11 +10,11 @@ public class Zona {
 	private ArrayList<Animal> animales;
 	public Zona(){this.animales = new ArrayList<Animal>();}
 	
-	public Zona(String nombre, Zoologico[] zoo, Animal[] animales){
-		this.nombre = nombre;
-		this.zoo = zoo;
-		this.animales = animales;
-	}
+//	public Zona(String nombre, Zoologico[] zoo, Animal[] animales){
+//		this.nombre = nombre;
+//		this.zoo = zoo;
+//		this.animales = animales;
+//	}
 	
 	public Zona(String nombre, Zoologico zoo){
 		this.nombre = nombre;
