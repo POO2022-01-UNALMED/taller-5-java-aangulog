@@ -109,7 +109,7 @@ public class MainTaller5 {
 //		}
 //		System.out.println(ok);
 		
-		System.out.println(Animal.totalPorTipo());
+//		System.out.println(Animal.totalPorTipo());
 		
 	}
 }

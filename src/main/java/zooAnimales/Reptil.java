@@ -9,7 +9,7 @@ public class Reptil extends Animal{
 	private String colorEscamas;
 	private int largoCola;
 	public static int totalReptiles;
-	public Reptil(){totalReptiles+=1;listado.add(this);}
+	public Reptil(){totalReptiles+=1;listado = new ArrayList<Reptil>();listado.add(this);}
 	
 	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
 		 this.setNombre(nombre);

@@ -9,7 +9,7 @@ public class Pez extends Animal{
 	private String colorEscamas;
 	private int cantidadAletas;
 	public static int totalPeces;
-	public Pez(){totalPeces+=1;listado.add(this);}
+	public Pez(){totalPeces+=1;listado = new ArrayList<Pez>();listado.add(this);}
 	
 	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
 		 this.setNombre(nombre);
