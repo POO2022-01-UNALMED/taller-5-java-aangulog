@@ -1,4 +1,5 @@
 package zooAnimales;
+import java.util.ArrayList;
 
 import gestion.Zona;
 import gestion.Zoologico;
@@ -9,8 +10,8 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private Zona[] zona;
-	public Animal(){totalAnimales+=1;}
+	private ArrayList<Zona> zona;
+	public Animal(){totalAnimales+=1;this.zona = new ArrayList<Zona>();}
 
 	public Animal(String nombre, int edad, String habitat, String genero){
 		this.nombre=nombre;
@@ -25,27 +26,22 @@ public class Animal {
 		return "desplazarse";
 	}
 	
-	public static void totalPorTipo() {
-		System.out.println(
+	public static String totalPorTipo() {
+		return
 				"Mamiferos: "+Mamifero.cantidadMamiferos()+
 				"\nAves: "+Ave.cantidadAves()+
 				"\nReptiles: "+Reptil.cantidadReptiles()+
 				"\nPeces: "+Pez.cantidadPeces()+
-				"\nAnfibios: "+Anfibio.cantidadAnfibios());
+				"\nAnfibios: "+Anfibio.cantidadAnfibios();
 	}
 	
 	@Override
 	public String toString(){
-		if(this.zona ==null) {
+		if(this.zona.toArray().length==0) {
 		return "Mi nombre es "+this.getNombre()+", tengo una edad de "+this.getEdad()+", habito en "+this.getHabitat()+" y mi genero es "+this.getGenero();
-	}
-		else if (this.zona.length==1){
+		}else {
 			return "Mi nombre es "+this.getNombre()+" tengo una edad de "+this.getEdad()+" habito en "+this.getHabitat()+" y mi genero es "+this.getGenero()+", la zona en la que me ubico es "+this.getZona()+", en el RELLENAR ACORDE";
-		}
-		else {
-			return "Mi nombre es "+this.getNombre()+" tengo una edad de "+this.getEdad()+" habito en "+this.getHabitat()+" y mi genero es "+this.getGenero();
-		}
-	}
+		}}
 		
 		
 //	public void setTotalAnimales(int a) {totalAnimales=a;}
@@ -63,6 +59,6 @@ public class Animal {
 	public void setGenero(String a) {genero=a;}
 	public String getGenero(){return genero;}
 	
-	public void setZona(Zona[] a) {zona=a;}
-	public Zona[] getZona(){return zona;}
+	public void setZona(ArrayList<Zona> a) {zona=a;}
+	public ArrayList<Zona> getZona(){return zona;}
 }

@@ -6,12 +6,7 @@ public class Zoologico {
 	private String ubicacion;
 	private ArrayList<Zona> zonas;
 	public Zoologico(){this.zonas = new ArrayList<Zona>();}
-	
-//	public Zoologico(String nombre, String ubicacion, Zona[] zonas){
-//		this.nombre = nombre;
-//		this.ubicacion = ubicacion;
-//		this.zonas = zonas;
-//	}
+
 	
 	public Zoologico(String nombre, String ubicacion){
 		this.nombre = nombre;
@@ -25,9 +20,8 @@ public class Zoologico {
 	public void setUbicacion(String a) {ubicacion=a;}
 	public String getUbicacion(){return ubicacion;}
 	
-//	public void setZonas(Zona[] a) {zonas=a;}
+	public void setZona(ArrayList<Zona> a) {zonas = a;}
 	public ArrayList<Zona> getZona(){return zonas;}
-	
 	public void agregarZonas(Zona a) {
 		zonas.add(a);
 	}
